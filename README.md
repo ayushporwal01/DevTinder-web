@@ -24,3 +24,5 @@
 - You should not be able to access other routes without login
 - If token is not present, redirect user to login page
 - Logout Feature
+- Get the feed and add it in the store
+- Build userCard on feed 
