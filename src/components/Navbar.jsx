@@ -70,10 +70,11 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
+                    to="/connections"
                     className="text-[0.99rem]"
                     onClick={() => setIsDropdownOpen(false)}
                   >
-                    Settings
+                    Connections
                   </Link>
                 </li>
                 <li>

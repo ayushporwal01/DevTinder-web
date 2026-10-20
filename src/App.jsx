@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { BASE_URL } from "./utils/constants";
 import { addUser, removeUser } from "./utils/userSlice";
+import Connections from "./components/Connections";
 
 function App() {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ function App() {
               <Route path="/" element={<Feed />}></Route>
               <Route path="login" element={<Login />} />
               <Route path="profile" element={<Profile />} />
+              <Route path="connections" element={<Connections />} />
 
               <Route path="*" element={<NotFound />} />
             </Route>
