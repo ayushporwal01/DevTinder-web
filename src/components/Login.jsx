@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/constants";
 
 const Login = () => {
-  const [emailId, setEmailId] = useState("porwalayush@gmail.com");
-  const [password, setPassword] = useState("ayush@143S");
+  const [emailId, setEmailId] = useState("adawong@gmail.com");
+  const [password, setPassword] = useState("ada@143S");
   const [error, setError] = useState("");
 
   const dispatch = useDispatch();
@@ -15,6 +15,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setError("");
 
     try {
       const res = await axios.post(
@@ -27,9 +28,10 @@ const Login = () => {
       );
 
       dispatch(addUser(res.data));
-      return navigate("/");
+
+      navigate("/");
     } catch (err) {
-      setError(err?.response?.data || "Something went wrong");
+      console.log(err);
     }
   };
 
