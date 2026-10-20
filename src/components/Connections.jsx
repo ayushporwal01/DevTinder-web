@@ -3,7 +3,6 @@ import { BASE_URL } from "../utils/constants";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/ConnectionSlice";
-import ClearIcon from "@mui/icons-material/Clear";
 
 const Connections = () => {
   const dispatch = useDispatch();
@@ -40,7 +39,7 @@ const Connections = () => {
   }, [dispatch]);
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center gap-y-4">
       <h2 className="text-2xl font-medium text-center my-10">Connections</h2>
 
       {connections.length === 0 && (
@@ -54,27 +53,27 @@ const Connections = () => {
         return (
           <div
             key={_id}
-            className="flex items-center justify-between bg-base-300 w-md px-5 py-2 rounded-sm"
+            className="flex items-center justify-between bg-base-300 w-xl px-9 py-4 gap-x-5 rounded-sm"
           >
-            <div className="flex items-center gap-x-5">
+            <div className="flex items-start gap-x-5">
               <img
                 src={photoURL}
-                className="w-16 rounded-full"
+                className="w-20 h-20 rounded-full"
                 alt="Profile Picture"
               />
-              <div className="flex flex-col gap-y-0.5">
+              <div className="flex flex-col gap-y-1">
                 <h3 className="text-[1.2rem] text-white/90 font-semibold ">
                   {firstName} {lastName}
                 </h3>
                 <p className="text-sm text-white/90">
                   {age}, {gender}
                 </p>
-                <p className="text-sm text-white/90">{about}</p>
+                <p className="text-sm text-white/90 w-64 break-all">{about}</p>
               </div>
             </div>
 
-            <button className="bg-red-500 hover:bg-red-600 px-2 py-1 rounded-sm transition duration-300 ease-in-out cursor-pointer">
-              <ClearIcon />
+            <button className="btn bg-red-500 hover:scale-105 transition-transform duration-300 ease-in-out">
+              Remove
             </button>
           </div>
         );

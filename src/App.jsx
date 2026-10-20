@@ -11,6 +11,7 @@ import axios from "axios";
 import { BASE_URL } from "./utils/constants";
 import { addUser, removeUser } from "./utils/userSlice";
 import Connections from "./components/Connections";
+import Requests from "./components/Requests";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,6 +42,7 @@ function App() {
               <Route path="login" element={<Login />} />
               <Route path="profile" element={<Profile />} />
               <Route path="connections" element={<Connections />} />
+              <Route path="requests" element={<Requests />} />
 
               <Route path="*" element={<NotFound />} />
             </Route>

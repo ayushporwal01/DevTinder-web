@@ -28,4 +28,5 @@
 - Build userCard on feed
 - Edit Profile Feature
 - Show Toast Message on save of profile
-- See all my connectinos
+- New Page - See all my connections
+- New Page - See all my connection requests

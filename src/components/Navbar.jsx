@@ -78,6 +78,15 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link
+                    to="/requests"
+                    className="text-[0.99rem]"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    Requests
+                  </Link>
+                </li>
+                <li>
                   <a
                     className="text-[0.99rem]"
                     onClick={() => {
